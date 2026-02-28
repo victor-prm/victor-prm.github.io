@@ -1,13 +1,23 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import BackgroundGrain from "@/components/bg-grain";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ibmSans = IBM_Plex_Sans({
+  weight: ["100", "200", "300", "400","500", "600", "700"],
+  variable: "--font-ibm-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmSerif = IBM_Plex_Serif({
+  weight: ["100", "200", "300", "400","500", "600", "700"],
+  variable: "--font-ibm-serif",
+  subsets: ["latin"],
+});
+
+
+const ibmMono = IBM_Plex_Mono({
+  weight: ["100", "200", "300", "400","500", "600", "700"],
+  variable: "--font-ibm-mono",
   subsets: ["latin"],
 });
 
@@ -20,8 +30,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+
+        className={`${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiased bg-white`}
       >
+        <BackgroundGrain />
         {children}
       </body>
     </html>

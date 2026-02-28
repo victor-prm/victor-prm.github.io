@@ -1,30 +1,23 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import ListItem from "@/_components/list-item";
+import ProjectGallery from "@/components/project-gallery";
 
 export default async function Home() {
-  const projectsDir = path.join(process.cwd(), "_content/projects");
 
-  let projects = [];
-  if (fs.existsSync(projectsDir)) {
-    const folders = fs.readdirSync(projectsDir);
-    projects = folders.map((folderName) => {
-      const mdPath = path.join(projectsDir, folderName, "project.md"); // <--- use project.md
-      if (!fs.existsSync(mdPath)) return null;
-      const fileContents = fs.readFileSync(mdPath, "utf8");
-      const { data } = matter(fileContents);
-      return { slug: folderName, ...data };
-    }).filter(Boolean);
-  }
 
   return (
-    <div style={{ maxWidth: "600px", margin: "0 auto", padding: "2rem" }}>
-      <h1>Projects</h1>
-      {projects.length === 0 && <p>No projects found.</p>}
-      {projects.map((p) => (
-        <ListItem key={p.slug} {...p} />
-      ))}
+    <div className="container p-4 mx-auto flex flex-col gap-10 font-ibm-sans">
+      <header className="bg-white/75 backdrop-blur-xs ring ring-gray-300/50 text-black p-4 text-2xl flex flex-col gap-2">
+        <h1 className="font-ibm-serif font-medium text-9xl mb-8">Hello <span className="block font-ibm-sans text-7xl font-normal">I'm Victor</span></h1>
+        <p>I'm a web developer based in Copenhagen.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia harum accusantium optio.</p>
+        <p>I'm also a co-founder and design technologist in Circuit Circus, an interaction design studio based in copenhagen</p>
+      </header>
+      <main className="bg-white/75 backdrop-blur-xs ring ring-gray-300/50 text-black p-4">
+        <ProjectGallery />
+      </main>
+      <footer>
+
+      </footer>
     </div>
+
   );
 }

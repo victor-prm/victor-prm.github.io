@@ -1,0 +1,30 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import ListItem from "@/components/list-item";
+
+export default async function ProjectGallery({ ...props }) {
+    const projectsDir = path.join(process.cwd(), "content/projects");
+
+    let projects = [];
+    if (fs.existsSync(projectsDir)) {
+        const folders = fs.readdirSync(projectsDir);
+        projects = folders.map((folderName) => {
+            const mdPath = path.join(projectsDir, folderName, "project.md");
+            if (!fs.existsSync(mdPath)) return null;
+            const fileContents = fs.readFileSync(mdPath, "utf8");
+            const { data } = matter(fileContents);
+            return { slug: folderName, ...data };
+        }).filter(Boolean);
+    }
+
+    return (
+        <section >
+            {props.tile && <h1>props.title</h1>}
+            {projects.length === 0 && <p>No projects found.</p>}
+            {projects.map((p) => (
+                <ListItem key={p.slug} {...p} />
+            ))}
+        </section>
+    );
+}

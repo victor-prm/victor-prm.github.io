@@ -2,12 +2,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import ImageGallery from "@/_components/image-gallery";
+import ImageGallery from "@/components/image-gallery";
 
 export default async function ProjectPage({ params }) {
   const { id } = await params;
 
-  const projectDir = path.join(process.cwd(), "_content/projects", id);
+  const projectDir = path.join(process.cwd(), "content/projects", id);
   const mdPath = path.join(projectDir, "project.md");
 
   if (!fs.existsSync(mdPath)) return <p>Project not found</p>;
