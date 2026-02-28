@@ -1,6 +1,6 @@
 import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import BackgroundGrain from "@/components/bg-grain";
+import BackgroundGrain from "@/components/layout/bg-grain";
 
 const ibmSans = IBM_Plex_Sans({
   weight: ["100", "200", "300", "400","500", "600", "700"],

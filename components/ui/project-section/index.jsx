@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import ListItem from "@/components/list-item";
+import ProjectItem from "@/components/ui/project-section/project-item";
 
-export default async function ProjectGallery({ ...props }) {
+export default async function ProjectSection({ ...props }) {
     const projectsDir = path.join(process.cwd(), "content/projects");
 
     let projects = [];
@@ -23,7 +23,7 @@ export default async function ProjectGallery({ ...props }) {
             {props.tile && <h1>props.title</h1>}
             {projects.length === 0 && <p>No projects found.</p>}
             {projects.map((p) => (
-                <ListItem key={p.slug} {...p} />
+                <ProjectItem key={p.slug} {...p} />
             ))}
         </section>
     );

@@ -16,6 +16,10 @@
   --color-vpport-warning: #FF5D5D;
 }
 
+.cust-content-container {
+  @apply bg-white/25 backdrop-blur-xs ring ring-gray-200/50 rounded-2xl py-4
+}
+
 .bg-texture {
   background-color: var(--color-vpport-gray-lightest);
   opacity: 0.8;

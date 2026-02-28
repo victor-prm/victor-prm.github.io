@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Roskilde Festival",
+        "logo": "/collaborators/roskilde-festival.svg"
+    },
+    {
+        "name": "Google",
+        "logo": "/collaborators/google.svg"
+    },
+    {
+        "name": "Manyone",
+        "logo": "/collaborators/manyone.svg"
+    },
+    {
+        "name": "South By Southwest",
+        "logo": "/collaborators/sxsw.svg"
+    },
+    {
+        "name": "GlaxoSmithKline",
+        "logo": "/collaborators/gsk.svg"
+    },
+    {
+        "name": "Bang & Olufsen",
+        "logo": "/collaborators/bang-olufsen.svg"
+    },
+    {
+        "name": "Capgemini",
+        "logo": "/collaborators/capgemini.svg"
+    },
+    {
+        "name": "Aller Media",
+        "logo": "/collaborators/aller-media.svg"
+    },
+    {
+        "name": "NextM",
+        "logo": "/collaborators/next-m.svg"
+    },
+    {
+        "name": "Museet for Søfart",
+        "logo": "/collaborators/mfs-soefart.svg"
+    },
+    {
+        "name": "Click Festival",
+        "logo": "/collaborators/click-festival.svg"
+    },
+    {
+        "name": "Medicinsk Museion",
+        "logo": "/collaborators/medicinsk-museion.svg"
+    },
+    {
+        "name": "Supertusch",
+        "logo": "/collaborators/supertusch.svg"
+    },
+    {
+        "name": "Sun Effects",
+        "logo": "/collaborators/sun-effects.svg"
+    },
+    {
+        "name": "Reflektor",
+        "logo": "/collaborators/reflektor.svg"
+    },
+    {
+        "name": "ESSE",
+        "logo": "/collaborators/esse.svg"
+    }
+]
