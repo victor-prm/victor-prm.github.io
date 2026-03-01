@@ -1,7 +1,7 @@
 export default function PageHeader() {
     return (
-        <header className="cust-content-container text-black p-4 text-xl flex flex-col gap-2">
-            <h1 className="font-ibm-serif font-medium text-[clamp(40px,50vw,120px)] leading-none mb-8">
+        <header className="cust-content-container text-black text-xl flex flex-col gap-2">
+            <h1 className="font-ibm-serif font-medium text-6xl sm:text-8xl md:text-9xl leading-none mb-8">
                 Hello
                 <span className="block">I'm Victor</span>
             </h1>

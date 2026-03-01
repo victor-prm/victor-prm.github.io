@@ -1,6 +1,5 @@
 import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import BackgroundGrain from "@/components/layout/bg-grain";
 
 const ibmSans = IBM_Plex_Sans({
   weight: ["100", "200", "300", "400","500", "600", "700"],
@@ -31,9 +30,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
 
-        className={`${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiased bg-white`}
+        className={`${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiased`}
       >
-        <BackgroundGrain />
         {children}
       </body>
     </html>
