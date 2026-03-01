@@ -2,6 +2,8 @@
 
 
 @theme inline {
+  --font-bliss-mood: var(--font-bliss-mood);
+  --font-nunito-sans: var(--font-nunito-sans);
   --font-ibm-sans: var(--font-ibm-sans);
   --font-ibm-serif: var(--font-ibm-serif);
   --font-ibm-mono: var(--font-ibm-mono);
@@ -19,16 +21,17 @@
 
 @layer components {
   .cust-content-container {
-    @apply bg-gray-50/20 backdrop-blur-md ring-2 ring-gray-500/5 rounded-md px-6 pt-6 pb-12 shadow-2xl shadow-gray-500/10;
+    @apply bg-gray-50/50 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-xl px-6 pt-6 pb-12 shadow-2xl shadow-gray-500/10;
+  }
+
+  .cust-headline {
+    @apply text-black font-nunito-sans font-semibold
+  }
+
+  .cust-headline-outline {
+    @apply text-white text-shadow-md text-shadow-black font-ibm-serif font-semibold
   }
 }
-.bg-texture {
-  background-color: var(--color-vpport-gray-lightest);
-  opacity: 0.8;
-  background-image: radial-gradient(var(--color-vpport-gray-medium) 1px, var(--color-vpport-gray-lightest) 1px);
-  background-size: 12px 12px;
-}
-
 
 /* Hide scrollbar for Chrome, IE, Edge and Firefox */
 *::-webkit-scrollbar {

@@ -15,6 +15,7 @@ export default async function Home() {
           <CollaborationSection />
           {/*  <ProjectSection /> */}
           <CVSection />
+           <CollaborationSection />
         </main>
         <footer>
 

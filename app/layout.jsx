@@ -1,21 +1,33 @@
-import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono, Nunito_Sans } from "next/font/google";
+import BlissMood from 'next/font/local'
 import "./globals.css";
 
+const blissMood = BlissMood({
+  src: "../fonts/BlissMood.woff",
+  variable: "--font-bliss-mood",
+})
+
+const nunitoSans = Nunito_Sans({
+  weight: ["200", "300", "400", "500", "600", "700"],
+  variable: "--font-nunito-sans",
+  subsets: ["latin"],
+});
+
 const ibmSans = IBM_Plex_Sans({
-  weight: ["100", "200", "300", "400","500", "600", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   variable: "--font-ibm-sans",
   subsets: ["latin"],
 });
 
 const ibmSerif = IBM_Plex_Serif({
-  weight: ["100", "200", "300", "400","500", "600", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   variable: "--font-ibm-serif",
   subsets: ["latin"],
 });
 
 
 const ibmMono = IBM_Plex_Mono({
-  weight: ["100", "200", "300", "400","500", "600", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   variable: "--font-ibm-mono",
   subsets: ["latin"],
 });
@@ -30,7 +42,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
 
-        className={`${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiased`}
+        className={`${nunitoSans.variable} ${blissMood.variable} ${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiase`}
       >
         {children}
       </body>
