@@ -10,16 +10,18 @@
   --color-vpport-gray-lightest: #f4f4f2;
   --color-vpport-gray-light: #e8e8e8;
   --color-vpport-gray-medium: #bbbfca;
-  --color-vpport-gray-medium: #bbbfca;
+  --color-vpport-gray-medium: #bbbfcd;
   --color-vpport-gray-dark: #495464;
   --color-vpport-black: #000000;
   --color-vpport-warning: #FF5D5D;
+
 }
 
-.cust-content-container {
-  @apply bg-gray-50/25 backdrop-blur-md ring-2 ring-gray-200/50 rounded-2xl px-6 py-10 shadow-2xl shadow-gray-500/10
+@layer components {
+  .cust-content-container {
+    @apply bg-gray-50/20 backdrop-blur-md ring-2 ring-gray-200/50 rounded-md px-6 pt-6 pb-12 shadow-2xl shadow-gray-500/10;
+  }
 }
-
 .bg-texture {
   background-color: var(--color-vpport-gray-lightest);
   opacity: 0.8;
@@ -28,16 +30,11 @@
 }
 
 
-
-
-
-
-
-
 /* Hide scrollbar for Chrome, IE, Edge and Firefox */
 *::-webkit-scrollbar {
   display: none;
 }
+
 * {
   -ms-overflow-style: none;
   /* IE and Edge */
