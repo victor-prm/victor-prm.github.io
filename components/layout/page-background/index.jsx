@@ -1,6 +1,6 @@
 export default function PageBackground() {
     return (
-        <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80" className="fixed top-0 left-0 w-screen h-screen bg-gray-50 pointer-events-none -z-10">
+        <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80" className="fixed top-0 left-0 w-screen h-screen bg-grey-50 pointer-events-none -z-10">
             <defs>
                 <style>{`
                     @keyframes rotate {
@@ -38,6 +38,3 @@ export default function PageBackground() {
         </svg>
     );
 }
-
-
-{/* <div className="fixed inset-0 -z-10 bg-linear-60 from-orange-50 to-gray-200"></div> */ }
