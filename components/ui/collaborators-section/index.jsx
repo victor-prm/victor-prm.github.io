@@ -25,8 +25,8 @@ export default async function CollaborationSection() {
     }
 
     return (
-        <section className='text-normal'>
-            <h2 className="text-3xl font-ibm-serif font-bold mb-8">People I've worked with</h2>
+        <section className='text-normal cust-content-container'>
+            <h2 className="text-6xl font-ibm-serif font-bold mb-8">People I've worked with</h2>
             <ul className="grid grid-cols-4 gap-8 py-8">
                 {companies.map(company => (
                     <CompanyItem key={company.name} name={company.name} logo={company.logo} />

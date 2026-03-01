@@ -17,7 +17,7 @@
 }
 
 .cust-content-container {
-  @apply bg-white/25 backdrop-blur-xs ring ring-gray-200/50 rounded-2xl py-4
+  @apply bg-gray-50/25 backdrop-blur-md ring-2 ring-gray-200/50 rounded-2xl px-6 py-10 shadow-2xl shadow-amber-700/10
 }
 
 .bg-texture {
@@ -28,11 +28,16 @@
 }
 
 
+
+
+
+
+
+
+/* Hide scrollbar for Chrome, IE, Edge and Firefox */
 *::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge and Firefox */
 * {
   -ms-overflow-style: none;
   /* IE and Edge */

@@ -4,7 +4,7 @@ export default function ImageGallery({ images = [] }) {
   if (!images.length) return null;
 
   return (
-    <div style={{ marginTop: "2rem" }}>
+    <div className="cust-content-container" style={{ marginTop: "2rem" }}>
       <h3>Gallery</h3>
       <div
         style={{
