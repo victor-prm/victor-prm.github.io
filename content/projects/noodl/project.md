@@ -1,7 +1,7 @@
 ---
-title: "FeedElitist"
-year: "2024"
-thumbnail: "/projects/feedelitist/feedelitist-1.jpg"
+title: "Noodl"
+year: "2022"
+thumbnail: "/projects/noodl/noodl-1.jpg"
 byline: "Marketplace enhancer"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]

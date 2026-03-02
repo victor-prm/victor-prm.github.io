@@ -2,6 +2,7 @@ import PageHeader from "@/components/layout/page-header";
 import CollaborationSection from "@/components/ui/collaborators-section";
 import ProjectSection from "@/components/ui/project-section";
 import CVSection from "@/components/ui/cv-section";
+import PageFooter from "@/components/layout/page-footer";
 export default async function Home() {
 
 
@@ -11,14 +12,13 @@ export default async function Home() {
 
         <PageHeader />
         <main className="flex flex-col gap-8 md:gap-12">
+
           <CollaborationSection />
           <ProjectSection />
           <CVSection />
-           <CollaborationSection />
-        </main>
-        <footer>
 
-        </footer>
+        </main>
+        <PageFooter />
       </div>
     </>
 

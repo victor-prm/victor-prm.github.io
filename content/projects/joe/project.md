@@ -1,6 +1,6 @@
 ---
-title: "FeedElitist"
-year: "2024"
+title: "Joe"
+year: "2017"
 thumbnail: "/projects/feedelitist/feedelitist-1.jpg"
 byline: "Marketplace enhancer"
 description: "This is a short summary of the project."
