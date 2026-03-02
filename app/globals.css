@@ -21,7 +21,7 @@
 
 @layer components {
   .cust-content-container {
-    @apply bg-gray-50/50 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-xl px-6 pt-6 pb-12 shadow-2xl shadow-gray-500/10;
+    @apply bg-gray-50/75 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-xl px-6 pt-6 pb-12 shadow-2xl shadow-gray-500/10;
   }
 
   .cust-headline {

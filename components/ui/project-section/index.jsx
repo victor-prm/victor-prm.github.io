@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ProjectItem from "@/components/ui/project-section/project-item";
+import PageSection from "@/components/layout/page-section";
 
 export default async function ProjectSection({ ...props }) {
     const projectsDir = path.join(process.cwd(), "content/projects");
@@ -19,12 +20,12 @@ export default async function ProjectSection({ ...props }) {
     }
 
     return (
-        <section >
+        <PageSection >
             {props.tile && <h1>props.title</h1>}
             {projects.length === 0 && <p>No projects found.</p>}
             {projects.map((p) => (
                 <ProjectItem key={p.slug} {...p} />
             ))}
-        </section>
+        </PageSection>
     );
 }

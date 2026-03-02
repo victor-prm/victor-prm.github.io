@@ -1,5 +1,6 @@
 import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono, Nunito_Sans } from "next/font/google";
 import BlissMood from 'next/font/local'
+import PageBackground from "@/components/layout/page-background";
 import "./globals.css";
 
 const blissMood = BlissMood({
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
 
         className={`${nunitoSans.variable} ${blissMood.variable} ${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiase`}
       >
+        <PageBackground />
         {children}
       </body>
     </html>

@@ -45,7 +45,8 @@ export default async function CVSection() {
                             period: "2019-2022"
                         },
                         {
-                            title: "Lab Manager, AIR Lab (Parental leave cover)",
+                            title: "Lab Manager, AIR Lab",
+                            note: "Parental leave cover",
                             period: "2021"
                         }
                     ]}
@@ -54,7 +55,8 @@ export default async function CVSection() {
                     employer={"ITU Copenhagen"}
                     roles={[
                         {
-                            title: "Assistant Lecturer (Design and programming courses)",
+                            title: "Assistant Lecturer",
+                            note: "Design and programming courses",
                             period: "2016-2022"
                         },
                         {
@@ -89,7 +91,8 @@ export default async function CVSection() {
                     employer={"Circuit Circus"}
                     roles={[
                         {
-                            title: "Co-founder, Programmer & Interaction Desginer",
+                            title: "Programmer & Interaction Designer",
+                            note: "Also co-founder",
                             period: "2015-now"
                         }
                     ]}

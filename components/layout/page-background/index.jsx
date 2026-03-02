@@ -32,7 +32,7 @@ export default function PageBackground() {
                 </style>
                 <linearGradient id="limeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="60%" stopColor="var(--color-lime-100)" />
-                    <stop offset="100%" stopColor="var(--color-blue-200)" />
+                    <stop offset="100%" stopColor="var(--color-lime-400)" />
                 </linearGradient>
             </defs>
 
