@@ -4,7 +4,7 @@ import CVItem from "./cv-item";
 export default async function CVSection() {
 
     return (
-        <PageSection title="Places I've worked">
+        <PageSection title="Work Experience">
             <ol className="grid gap-y-8 gap-x-16 xl:grid-cols-2">
                 <CVItem
                     employer={"Fluxscape"}

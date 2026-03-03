@@ -1,7 +1,7 @@
 ---
 title: "Joe"
 year: "2017"
-thumbnail: "/projects/feedelitist/feedelitist-1.jpg"
+thumbnail: "/projects/joe/joe-1.jpg"
 byline: "Marketplace enhancer"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]

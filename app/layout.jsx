@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
 
-        className={`${nunitoSans.variable} ${blissMood.variable} ${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiase`}
+        className={`${nunitoSans.variable} ${blissMood.variable} ${ibmSans.variable} ${ibmSerif.variable} ${ibmMono.variable} antialiased`}
       >
         <PageBackground />
         {children}
