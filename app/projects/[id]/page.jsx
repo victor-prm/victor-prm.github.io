@@ -18,21 +18,21 @@ export default async function ProjectPage({ params }) {
   // Read images from public folder
   const publicDir = path.join(process.cwd(), "public/projects", id);
 
-let images = [];
-if (fs.existsSync(publicDir)) {
-  images = fs
-    .readdirSync(publicDir)
-    .filter((file) => /\.(png|jpe?g|webp|gif)$/i.test(file))
-    .sort((a, b) => {
-      const numA = parseInt(a.match(/\d+/));
-      const numB = parseInt(b.match(/\d+/));
-      return numA - numB;
-    })
-    .map((file) => `/projects/${id}/${file}`);
-}
+  let images = [];
+  if (fs.existsSync(publicDir)) {
+    images = fs
+      .readdirSync(publicDir)
+      .filter((file) => /\.(png|jpe?g|webp|gif)$/i.test(file))
+      .sort((a, b) => {
+        const numA = parseInt(a.match(/\d+/));
+        const numB = parseInt(b.match(/\d+/));
+        return numA - numB;
+      })
+      .map((file) => `/projects/${id}/${file}`);
+  }
 
   return (
-    <div style={{ maxWidth: "700px", margin: "0 auto", padding: "2rem" }}>
+    <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans">
       <h1>{data.title}</h1>
       <h3>{data.byline}</h3>
       <p>{data.year}</p>

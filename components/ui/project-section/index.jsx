@@ -22,16 +22,14 @@ export default async function ProjectSection({ ...props }) {
     projects = projects.sort((a, b) => b.year - a.year)
 
     return (
-        <section className="px-6">
-            <h2 className="font-ibm-serif text-3xl md:text-4xl">Selected Projects</h2>
-            <hr className="my-4 text-lime-950/30" />
+        <PageSection title="Selected Projects" transparent>
             <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                 {projects.length === 0 && <p>No projects found.</p>}
                 {projects.map((p) => (
                     <ProjectItem key={p.slug} {...p} />
                 ))}
             </ol>
-        </section>
+        </PageSection>
 
 
     );
