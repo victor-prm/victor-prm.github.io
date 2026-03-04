@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { TbFileBroken } from "react-icons/tb";
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ProjectItem(props) {
@@ -17,7 +18,7 @@ export default function ProjectItem(props) {
     <li className="w-full max-w-sm">
       <button
         onClick={openModal}
-        className="group flex gap-1 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus:rounded-2xl  "     
+        className="group flex gap-1 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus:rounded-2xl  "
       >
         {props.thumbnail && (
           <figure
@@ -31,13 +32,18 @@ export default function ProjectItem(props) {
               group-hover:after:bg-black/0
             "
           >
-            <Image
-              src={props.thumbnail}
-              alt={props.title}
-              width={240}
-              height={240}
-              className="object-cover object-top size-full"
-            />
+            {
+              false ? (<Image
+                src={props.thumbnail}
+                alt={props.title}
+                width={240}
+                height={240}
+                className="object-cover object-top size-full"
+              />) : (
+                <TbFileBroken className="size-8 absolute top-1/2 left-1/2 -translate-1/2"/>
+              )
+            }
+
           </figure>
         )}
 

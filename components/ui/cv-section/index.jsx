@@ -19,8 +19,8 @@ export default async function CVSection() {
                     employer={"Freelance"}
                     roles={[
                         {
-                            title: "Frontend Developer",
-                            period: "2025-now"
+                            title: "Web Developer",
+                            period: "2024-now"
                         }
                     ]}
                 />

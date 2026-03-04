@@ -2,8 +2,6 @@
 
 
 @theme inline {
-  --font-bliss-mood: var(--font-bliss-mood);
-  --font-nunito-sans: var(--font-nunito-sans);
   --font-ibm-sans: var(--font-ibm-sans);
   --font-ibm-serif: var(--font-ibm-serif);
   --font-ibm-mono: var(--font-ibm-mono);
@@ -32,13 +30,13 @@
     @apply bg-gray-50/75 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-xl shadow-2xl shadow-gray-500/10;
   }
 
-  .cust-headline {
-    @apply text-black font-nunito-sans font-semibold
+  .cust-link{
+    @apply font-medium underline decoration-2 decoration-dotted decoration-inherit underline-offset-3 hover:opacity-70 hover:decoration-solid
   }
 
-  .cust-headline-outline {
+  /* .cust-headline-outline {
     @apply text-white text-shadow-md text-shadow-black font-ibm-serif font-semibold
-  }
+  } */
 }
 
 /* Hide scrollbar for Chrome, IE, Edge and Firefox */
