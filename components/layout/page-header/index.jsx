@@ -10,8 +10,8 @@ export default function PageHeader() {
             </h1>
             <p>I'm a web developer, with a background in interaction design.</p>
             <p>I thrive in frontend work, but have great understanding of backend tasks as well.</p>
-            <p>I currently work at <Link className="cust-link" href={"#"}>Fluxscape</Link> as a Frontend Developer.</p>
-            <p>I'm also a co-founder and design technologist in the interaction design studio <Link className="cust-link" href={"#"}>Circuit Circus</Link>.</p>
+            <p>I currently work at <Link className="cust-link" href={"https://www.fluxscape.io"}>Fluxscape</Link> as a Frontend Developer.</p>
+            <p>I'm also a co-founder and design technologist in the interaction design studio <Link className="cust-link" href={"https://www.circuit-circus.com/"}>Circuit Circus</Link>.</p>
         </header>
     )
 } 
