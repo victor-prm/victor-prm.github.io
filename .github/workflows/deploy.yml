@@ -28,6 +28,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out          # must match Next.js export folder
+          publish_dir: ./out          #  must match Next.js export folder
           publish_branch: gh-pages
           force_orphan: true
