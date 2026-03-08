@@ -10,6 +10,18 @@ import PageFooter from "@/components/layout/page-footer";
 
 const getNum = (str) => parseInt(str.match(/\d+/)?.[0] ?? 0);
 
+export async function generateStaticParams() {
+  const projectsDir = path.join(process.cwd(), "content/projects");
+
+  const ids = fs
+    .readdirSync(projectsDir)
+    .filter((file) =>
+      fs.statSync(path.join(projectsDir, file)).isDirectory()
+    );
+
+  return ids.map((id) => ({ id }));
+}
+
 export default async function ProjectPage({ params }) {
   const { id } = await params;
 
