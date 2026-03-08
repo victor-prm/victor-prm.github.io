@@ -4,36 +4,77 @@ import { useEffect, useRef } from "react";
 import MiniMasonry from "minimasonry";
 import Image from "next/image";
 
+function debounce(fn, delay) {
+  let t;
+  return (...args) => {
+    clearTimeout(t);
+    t = setTimeout(() => fn(...args), delay);
+  };
+}
+
 export default function ImageGallery({ images = [] }) {
   const containerRef = useRef(null);
   const masonryRef = useRef(null);
 
-  useEffect(() => {
-    if (!containerRef.current) return;
+  const initMasonry = () => {
+    const container = containerRef.current;
+    if (!container) return;
 
-    masonryRef.current?.destroy();
+    const width = container.offsetWidth;
+
+    let columns = 1;
+    const baseWidth = width > 800 ? 480 : 320;
+    const gutter = width > 800 ? 32 : 16;
+
+
+    if (masonryRef.current) {
+      masonryRef.current.destroy();
+    }
 
     masonryRef.current = new MiniMasonry({
-      container: containerRef.current,
-      baseWidth: 480,
-      gutterX: 32,
-      gutterY: 64,
-      ultimateGutter: 16,
-      surroundingGutter: false,
-     /*  minify: true */
+      container,
+      baseWidth,
+      gutterX: gutter,
+      gutterY: gutter,
+      ultimateGutter: gutter,
+      surroundingGutter: false
     });
+  };
 
-    return () => masonryRef.current?.destroy();
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const delayedInit = setTimeout(() => {
+      initMasonry();
+    }, 50);
+
+    const handleResize = debounce(() => {
+      initMasonry();
+    }, 100);
+
+    window.addEventListener("resize", handleResize, { passive: true });
+
+    return () => {
+      clearTimeout(delayedInit);
+      masonryRef.current?.destroy();
+      window.removeEventListener("resize", handleResize);
+    };
   }, [images]);
 
   const handleImageLoad = () => {
-    masonryRef.current?.layout();
+    if (masonryRef.current) {
+      masonryRef.current.layout();
+    }
   };
 
   return (
     <div ref={containerRef} className="masonry relative">
       {images.map((img, i) => (
-        <div key={i} className="absolute rounded-lg overflow-clip grayscale-100 hover:grayscale-0 duration-300 cursor-crosshair">
+        <div
+          key={i}
+          className="absolute rounded-lg overflow-clip hover:grayscale-0 duration-300 cursor-crosshair"
+        >
           <Image
             src={img.src}
             alt={img.alt}

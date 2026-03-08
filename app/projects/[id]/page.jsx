@@ -42,15 +42,33 @@ export default async function ProjectPage({ params }) {
       });
   }
 
+
+  const Descriptor = ({ k, v }) => {
+    return (
+      <p className="inline-flex gap-2">
+        <span className="font-medium min-w-24">{k}</span>
+        <span>{v}</span>
+      </p>
+    )
+  }
+
   return (
     <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans mb-20">
-      <h1 className="cust-font-display">{data.title}</h1>
-      <h3>{data.byline}</h3>
-      <p>{data.year}</p>
+      <header className="flex flex-col gap-1">
+        <h1 className="cust-font-display">
+          {data.title}
+        </h1>
+        <h2>{data.short_description}</h2>
+        <div className="flex flex-col gap-1">
+          <Descriptor k="Year" v={data.year} />
+          <Descriptor k="Keywords" v={data.tags.join(", ")} />
+        </div>
 
-      <MDXRemote source={content} />
-
-      <ImageGallery images={images} />
+        <MDXRemote source={content} />
+      </header>
+      <main>
+        <ImageGallery images={images} />
+      </main>
     </div>
   );
 }

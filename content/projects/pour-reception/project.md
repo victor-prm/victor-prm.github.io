@@ -2,7 +2,7 @@
 title: "Pour Reception"
 year: "2018"
 thumbnail: "/projects/pour-reception/pour-reception-1.jpg"
-byline: "Marketplace enhancer"
+short_description: "Playful radio using water-based interaction"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]
 type: ["Client Work"]

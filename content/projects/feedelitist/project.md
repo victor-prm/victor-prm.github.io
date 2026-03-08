@@ -2,7 +2,7 @@
 title: "FeedElitist"
 year: "2024"
 thumbnail: "/projects/feedelitist/feedelitist-1.png"
-byline: "Marketplace enhancer"
+short_description: "Marketplace enhancer"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]
 type: ["Client Work"]
