@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import sizeOf from "image-size";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ImageGallery from "@/components/ui/image-gallery";
+import { FaChevronLeft } from "react-icons/fa";
+import Link from "next/link";
 
 const getNum = (str) => parseInt(str.match(/\d+/)?.[0] ?? 0);
 
@@ -55,13 +57,19 @@ export default async function ProjectPage({ params }) {
   return (
     <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans mb-20">
       <header className="flex flex-col gap-1">
+        <Link href="/" className="mb-8 py-4 pl-0 pr-8 w-fit">
+          <FaChevronLeft />
+        </Link>
+
         <h1 className="cust-font-display">
           {data.title}
         </h1>
         <h2>{data.short_description}</h2>
         <div className="flex flex-col gap-1">
-          <Descriptor k="Year" v={data.year} />
-          <Descriptor k="Keywords" v={data.tags.join(", ")} />
+          {data.type && <Descriptor k="Type" v={data.type} />}
+          {data.companies && <Descriptor k="Involved" v={data.companies.join(", ")} />}
+          {data.year && <Descriptor k="Year" v={data.year} />}
+          {data.tags && <Descriptor k="Keywords" v={data.tags.join(", ")} />}
         </div>
 
         <MDXRemote source={content} />

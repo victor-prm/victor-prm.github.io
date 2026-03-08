@@ -73,7 +73,7 @@ export default function ImageGallery({ images = [] }) {
       {images.map((img, i) => (
         <div
           key={i}
-          className="absolute rounded-lg overflow-clip hover:grayscale-0 duration-300 cursor-crosshair"
+          className="absolute rounded-3xl overflow-clip cursor-crosshair bg-white ring-2 ring-black"
         >
           <Image
             src={img.src}
