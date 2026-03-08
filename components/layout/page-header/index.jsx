@@ -4,7 +4,7 @@ export default function PageHeader() {
 
     return (
         <header className=" text-2xl flex w-fit flex-col gap-3 md:gap-2  text-black p-6 max-w-180">
-            <h1 className="font-bliss-mood text-6xl sm:text-8xl md:text-9xl leading-none mb-8 font">
+            <h1 className="cust-font-display">
                 <span className="block">Hi</span>
                 I'm Victor
             </h1>

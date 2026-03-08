@@ -30,8 +30,12 @@
     @apply bg-gray-50/75 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-xl shadow-2xl shadow-gray-500/10;
   }
 
-  .cust-link{
+  .cust-link {
     @apply font-medium underline decoration-2 decoration-dotted decoration-inherit underline-offset-3 hover:opacity-70 hover:decoration-solid
+  }
+
+  .cust-font-display {
+    @apply font-ibm-serif text-6xl sm:text-8xl md:text-9xl leading-none mb-8
   }
 
   /* .cust-headline-outline {

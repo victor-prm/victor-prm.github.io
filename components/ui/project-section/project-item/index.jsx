@@ -9,12 +9,12 @@ export default function ProjectItem(props) {
     <li className="w-full max-w-sm">
       <Link
         href={`/projects/${props.slug}`}
-        className="group flex flex-col gap-1 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus:rounded-2xl"
+        className="group flex flex-col gap-1 text-left w-full"
       >
         <figure
           className="
             relative rounded-xl overflow-hidden
-            ring-2 ring-gray-50 aspect-16/10
+            ring-2 ring-black aspect-16/10
             grayscale-100 transition shrink-0
             group-hover:grayscale-0
             after:absolute after:inset-0 after:bg-black/5 after:z-10
