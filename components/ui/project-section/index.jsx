@@ -23,7 +23,7 @@ export default async function ProjectSection({ ...props }) {
 
     return (
         <PageSection title="Selected Projects" transparent>
-            <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            <ol className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-4 gap-4">
                 {projects.length === 0 && <p>No projects found.</p>}
                 {projects.map((p) => (
                     <ProjectItem key={p.slug} {...p} />

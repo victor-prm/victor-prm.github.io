@@ -12,6 +12,7 @@ export default async function Home() {
         <PageHeader />
         <main className="flex flex-col gap-8 md:gap-12">
           <CollaborationSection />
+          <ProjectSection />
           <CVSection />
         </main>
         <PageFooter />

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import ImageGallery from "@/components/ui/project-section/image-gallery";
+/* import ImageGallery from "@/components/ui/project-section/image-gallery"; */
 
 export default async function ProjectPage({ params }) {
   const { id } = await params;
@@ -39,7 +39,7 @@ export default async function ProjectPage({ params }) {
 
       <MDXRemote source={content} />
 
-      <ImageGallery images={images} />
+      {/* <ImageGallery images={images} /> */}
     </div>
   );
 }

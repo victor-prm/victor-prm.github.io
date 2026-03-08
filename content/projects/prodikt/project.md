@@ -1,7 +1,7 @@
 ---
 title: "Prodikt"
 year: "2023"
-thumbnail: "/projects/prodikt/prodikt-1.jpg"
+thumbnail: "/projects/prodikt/prodikt-1.png"
 byline: "Marketplace enhancer"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]
