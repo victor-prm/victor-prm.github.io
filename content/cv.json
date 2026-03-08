@@ -1,32 +1,93 @@
 [
     {
         "employer": "Fluxscape",
-        "role": "Frontend Developer",
-        "start": "2025",
-        "end": "now"
+        "roles": [
+            {
+                "title": "Frontend Developer",
+                "period": "2025-now"
+            }
+        ]
     },
     {
         "employer": "Freelance",
-        "role": "Webdesigner",
-        "start": "2024",
-        "end": null
+        "roles": [
+            {
+                "title": "Web Developer",
+                "period": "2024-now"
+            }
+        ]
     },
     {
         "employer": "Noodl",
-        "role": "Frontend Developer & Design Technologist",
-        "start": "2022",
-        "end": "2024"
+        "roles": [
+            {
+                "title": "Frontend Developer & Design Technologist",
+                "period": "2022-2024"
+            }
+        ]
+    },
+    {
+        "employer": "ITU Copenhagen Design Labs",
+        "roles": [
+            {
+                "title": "Design Consultant, IXD Lab",
+                "period": "2021-2022"
+            },
+            {
+                "title": "Design Consultant, AIR Lab",
+                "period": "2019-2022"
+            },
+            {
+                "title": "Lab Manager, AIR Lab",
+                "note": "Parental leave cover",
+                "period": "2021"
+            }
+        ]
     },
     {
         "employer": "ITU Copenhagen",
-        "role": "Design Labs",
-        "start": "2019",
-        "end": "2022"
+        "roles": [
+            {
+                "title": "Assistant Lecturer",
+                "note": "Design and programming courses",
+                "period": "2016-2022"
+            },
+            {
+                "title": "Main Lecturer (Summer school)",
+                "period": "2021"
+            },
+            {
+                "title": "Teaching Assistant",
+                "period": "2014-2016"
+            }
+        ]
     },
     {
-        "employer": "ITU Copenhagen",
-        "role": "Assistant Lecturer",
-        "start": "2016",
-        "end": "2022"
+        "employer": "BUF X",
+        "roles": [
+            {
+                "title": "Lab assistant & Instructor",
+                "period": "2017-2019"
+            }
+        ]
+    },
+    {
+        "employer": "Vital Beats (formerly SCAUT)",
+        "roles": [
+            {
+                "title": "Interaction Designer & Videographer",
+                "period": "2017-2019"
+            }
+        ]
+    },
+    {
+        "employer": "Circuit Circus",
+        "roles": [
+            {
+                "title": "Programmer & Interaction Designer",
+                "note": "Also co-founder",
+                "period": "2015-now"
+            }
+        ]
     }
 ]

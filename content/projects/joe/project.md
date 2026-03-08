@@ -2,12 +2,9 @@
 title: "Joe"
 year: "2017"
 thumbnail: "/projects/joe/joe-1.jpg"
-byline: "Marketplace enhancer"
+short_description: "Barista Chatbot"
 description: "This is a short summary of the project."
-tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]
+tags: ["Arduino", "Raspberry Pi", "RFID", "Servo Motors", "MongoDB", "HTML", "Javascript", "CSS"]
 type: ["Client Work"]
+companies: ["Google", "NextM"]
 ---
-
-Here’s the full description of the project.
-
-You can add multiple paragraphs, code, or other content here.

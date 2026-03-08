@@ -7,8 +7,6 @@ export default function CVItem({ ...props }) {
         <li className="flex flex-col w-full gap-1">
             <h3 className="text-xl font-medium">{props.employer}</h3>
 
-
-
             {roles && (
                 <ol className="flex flex-col gap-3">
                     {roles.map((role, _id) => (

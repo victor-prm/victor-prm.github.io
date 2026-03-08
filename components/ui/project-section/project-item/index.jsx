@@ -1,47 +1,40 @@
-"use client";
-
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { TbFileBroken } from "react-icons/tb";
 
 export default function ProjectItem(props) {
-  const router = useRouter();
-  const params = useSearchParams();
-
-  function openModal() {
-    const newParams = new URLSearchParams(params);
-    newParams.set("project", props.slug);
-    router.push(`?${newParams.toString()}`, { scroll: false });
-  }
+  const hasThumbnail = Boolean(props.thumbnail);
 
   return (
     <li className="w-full max-w-sm">
-      <button
-        onClick={openModal}
-        className="group flex gap-1 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus:rounded-2xl  "     
+      <Link
+        href={`/projects/${props.slug}`}
+        className="group flex flex-col gap-1 text-left w-full"
       >
-        {props.thumbnail && (
-          <figure
-            className="
-              relative max-w-1/2 rounded-xl overflow-hidden
-              ring-2 ring-gray-50 aspect-video h-25
-              grayscale-100 transition shrink-0
-              group-hover:grayscale-0
-              after:absolute after:inset-0 after:bg-black/5 after:z-10
-              after:transition
-              group-hover:after:bg-black/0
-            "
-          >
+        <figure
+          className="
+            relative rounded-xl overflow-hidden
+            aspect-16/10 transition shrink-0
+            after:absolute after:inset-0 after:bg-black/5 after:z-10
+            after:transition
+            group-hover:after:bg-black/0
+            flex items-center justify-center
+          "
+        >
+          {hasThumbnail ? (
             <Image
               src={props.thumbnail}
               alt={props.title}
               width={240}
               height={240}
-              className="object-cover object-top size-full"
+              className="object-cover object-top size-full rounded-xl grayscale-100 duration-300 group-hover:grayscale-0"
             />
-          </figure>
-        )}
+          ) : (
+            <TbFileBroken className="size-8 opacity-60" />
+          )}
+        </figure>
 
-        <hgroup className="p-2">
+        <hgroup className="px-2 pb-4">
           <h2 className="text-xl font-medium">
             {props.title}
           </h2>
@@ -49,7 +42,7 @@ export default function ProjectItem(props) {
             {props.year}
           </p>
         </hgroup>
-      </button>
+      </Link>
     </li>
   );
 }

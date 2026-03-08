@@ -2,7 +2,7 @@
 title: "Third Nature"
 year: "2023"
 thumbnail: "/projects/third-nature/third-nature-1.jpg"
-byline: "Marketplace enhancer"
+short_description: "Health community platform focused around hormonal health"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]
 type: ["Client Work"]
