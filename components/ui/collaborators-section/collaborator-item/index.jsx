@@ -10,7 +10,7 @@ export default function CollaboratorItem(props) {
                 alt={`${props.name} logo`}
                 width={100}
                 height={100}
-                className="h-24 w-auto"
+                className="h-12 md:h-18 w-auto"
             />
         </li>
     )

@@ -14,12 +14,11 @@
   --color-vpport-gray-dark: #495464;
   --color-vpport-black: #000000;
   --color-vpport-warning: #FF5D5D;
-
 }
 
 @layer components {
   .cust-content-container {
-    @apply bg-gray-50/25 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-xl px-6 pt-6 pb-12 shadow-2xl shadow-gray-500/10;
+    @apply bg-gray-50/25 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-3xl px-6 pt-6 pb-12 shadow-2xl shadow-gray-500/10;
   }
 
   .cust-content-container-transparent {
@@ -27,7 +26,7 @@
   }
 
   .cust-content-container-sm {
-    @apply bg-gray-50/75 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-xl shadow-2xl shadow-gray-500/10;
+    @apply bg-gray-50/25 backdrop-blur-xl ring-2 ring-gray-500/5 rounded-2xl shadow-2xl shadow-gray-500/10;
   }
 
   .cust-link {

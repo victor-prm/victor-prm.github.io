@@ -20,6 +20,10 @@
         "logo": "/collaborators/gsk.svg"
     },
     {
+        "name": "Haleon",
+        "logo": "/collaborators/haleon.svg"
+    },
+    {
         "name": "Bang & Olufsen",
         "logo": "/collaborators/bang-olufsen.svg"
     },
@@ -30,6 +34,18 @@
     {
         "name": "Aller Media",
         "logo": "/collaborators/aller-media.svg"
+    },
+    {
+        "name": "Mediacom",
+        "logo": "/collaborators/mediacom.svg"
+    },
+    {
+        "name": "Trailerpark Festival",
+        "logo": "/collaborators/trailerpark-festival.svg"
+    },
+    {
+        "name": "Prodikt",
+        "logo": "/collaborators/prodikt.svg"
     },
     {
         "name": "NextM",

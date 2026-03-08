@@ -11,7 +11,7 @@ export default async function CollaborationSection() {
 
     return (
         <PageSection title="Collaborations">
-            <ul className="grid grid-cols-4 lg:grid-cols-8 gap-8 py-8">
+            <ul className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-8">
                 {companies.map(company => (
                     <CollaboratorItem key={company.name} name={company.name} logo={company.logo} />
                 ))}

@@ -14,9 +14,7 @@ export default function ProjectItem(props) {
         <figure
           className="
             relative rounded-xl overflow-hidden
-            ring-2 ring-black aspect-16/10
-            grayscale-100 transition shrink-0
-            group-hover:grayscale-0
+            aspect-16/10 transition shrink-0
             after:absolute after:inset-0 after:bg-black/5 after:z-10
             after:transition
             group-hover:after:bg-black/0
@@ -29,14 +27,14 @@ export default function ProjectItem(props) {
               alt={props.title}
               width={240}
               height={240}
-              className="object-cover object-top size-full"
+              className="object-cover object-top size-full rounded-xl grayscale-100 duration-300 group-hover:grayscale-0"
             />
           ) : (
             <TbFileBroken className="size-8 opacity-60" />
           )}
         </figure>
 
-        <hgroup className="px-2">
+        <hgroup className="px-2 pb-4">
           <h2 className="text-xl font-medium">
             {props.title}
           </h2>

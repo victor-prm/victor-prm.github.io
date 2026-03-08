@@ -6,6 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import ImageGallery from "@/components/ui/image-gallery";
 import { FaChevronLeft } from "react-icons/fa";
 import Link from "next/link";
+import PageFooter from "@/components/layout/page-footer";
 
 const getNum = (str) => parseInt(str.match(/\d+/)?.[0] ?? 0);
 
@@ -55,7 +56,7 @@ export default async function ProjectPage({ params }) {
   }
 
   return (
-    <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans mb-20">
+    <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans">
       <header className="flex flex-col gap-1">
         <Link href="/" className="mb-8 py-4 pl-0 pr-8 w-fit">
           <FaChevronLeft />
@@ -77,6 +78,7 @@ export default async function ProjectPage({ params }) {
       <main>
         <ImageGallery images={images} />
       </main>
+       <PageFooter />
     </div>
   );
 }

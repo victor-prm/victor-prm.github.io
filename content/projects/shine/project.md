@@ -2,7 +2,7 @@
 title: "Shine"
 year: "2022"
 thumbnail: "/projects/shine/shine-1.jpg"
-short-description: "Health quiz app"
+short_description: "Health quiz app"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]
 type: ["Client Work"]

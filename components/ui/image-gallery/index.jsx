@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import MiniMasonry from "minimasonry";
 import Image from "next/image";
+import PageSection from "@/components/layout/page-section";
 
 function debounce(fn, delay) {
   let t;
@@ -69,22 +70,24 @@ export default function ImageGallery({ images = [] }) {
   };
 
   return (
-    <div ref={containerRef} className="masonry relative">
-      {images.map((img, i) => (
-        <div
-          key={i}
-          className="absolute rounded-3xl overflow-clip cursor-crosshair bg-white ring-2 ring-black"
-        >
-          <Image
-            src={img.src}
-            alt={img.alt}
-            width={img.width}
-            height={img.height}
-            className="w-full h-auto pointer-events-none"
-            onLoad={handleImageLoad}
-          />
-        </div>
-      ))}
-    </div>
+    <PageSection className="bg-gray-500/25">
+      <div ref={containerRef} className="masonry relative min-h-screen">
+        {images.map((img, i) => (
+          <div
+            key={i}
+            className="absolute rounded-2xl overflow-clip cursor-crosshair"
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              className="w-full h-auto pointer-events-none rounded-xl"
+              onLoad={handleImageLoad}
+            />
+          </div>
+        ))}
+      </div>
+    </PageSection>
   );
 }
