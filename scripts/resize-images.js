@@ -4,7 +4,7 @@ import path from "path";
 import sharp from "sharp";
 
 const projectsDir = path.join(process.cwd(), "public/projects");
-const minWidth = 800;
+const minWidth = 840;
 
 async function processFolder(folder) {
     const files = fs.readdirSync(folder).filter(f => /\.(png|jpe?g)$/i.test(f));
@@ -31,12 +31,12 @@ async function processFolder(folder) {
         if (!meta.width) continue;
 
         const resizeOptions = meta.width > minWidth ? { width: minWidth } : {};
-        const pipeline = image.resize(resizeOptions);
+        const pipeline = image.rotate().resize(resizeOptions);
 
         if (ext === ".png") {
             await pipeline.webp({ lossless: true }).toFile(outputPath);
         } else {
-            await pipeline.webp({ quality: 80 }).toFile(outputPath);
+            await pipeline.webp({ quality: 90 }).toFile(outputPath);
         }
 
         console.log(`Processed: ${file} → ${path.basename(outputPath)}`);

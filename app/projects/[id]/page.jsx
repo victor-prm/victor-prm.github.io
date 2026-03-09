@@ -61,16 +61,18 @@ export default async function ProjectPage({ params }) {
   const Descriptor = ({ k, v }) => {
     return (
       <p className="inline-flex gap-2">
-        <span className="font-medium min-w-24">{k}</span>
+        <span className="font-medium min-w-30">{k}</span>
         <span>{v}</span>
       </p>
     )
   }
 
+  {/* <header className=" text-2xl flex w-fit flex-col gap-3 md:gap-2  text-black p-6 max-w-180"></header> */}
+
   return (
     <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans">
-      <header className="flex flex-col gap-1">
-        <Link href="/" className="mb-8 p-3 w-fit">
+      <header className="flex flex-col gap-2 text-2xl p-6">
+        <Link href="/" className="mb-8 p-3 w-fit -m-3">
           <FaChevronLeft />
         </Link>
 

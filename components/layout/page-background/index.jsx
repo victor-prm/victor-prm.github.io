@@ -11,7 +11,7 @@ export default function PageBackground() {
             className={
                 `fixed top-0 left-0 w-screen h-screen pointer-events-none 
                 -z-10 transition-colors duration-500 
-                ${isProjects ? "bg-gray-300" : " bg-gray-50"}
+                ${isProjects ? "bg-taupe-200" : " bg-gray-50"}
             `}
         >
             <defs>
@@ -45,7 +45,7 @@ export default function PageBackground() {
                 </style>
                 <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="60%" stopColor="var(--color-blue-100)" />
-                    <stop offset="100%" stopColor="var(--color-cyan-100)" />
+                    <stop offset="100%" stopColor="var(--color-red-100)" />
                 </linearGradient>
             </defs>
 
