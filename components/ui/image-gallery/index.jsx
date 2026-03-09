@@ -70,24 +70,24 @@ export default function ImageGallery({ images = [] }) {
   };
 
   return (
-    <PageSection className="bg-gray-500/25">
-      <div ref={containerRef} className="masonry relative min-h-screen">
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className="absolute rounded-2xl overflow-clip cursor-crosshair"
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              width={img.width}
-              height={img.height}
-              className="w-full h-auto pointer-events-none rounded-xl"
-              onLoad={handleImageLoad}
-            />
-          </div>
-        ))}
-      </div>
-    </PageSection>
+
+    <div ref={containerRef} className="masonry relative min-h-screen animate-fade-in-scale">
+      {images.map((img, i) => (
+        <div
+          key={i}
+          className="absolute rounded-2xl overflow-clip cursor-crosshair animate-fade-in"
+        >
+          <Image
+            src={img.src}
+            alt={img.alt}
+            width={img.width}
+            height={img.height}
+            className="w-full h-auto pointer-events-none rounded-xl"
+            onLoad={handleImageLoad}
+          />
+        </div>
+      ))}
+    </div>
+
   );
 }

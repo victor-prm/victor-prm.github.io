@@ -14,6 +14,10 @@
   --color-vpport-gray-dark: #495464;
   --color-vpport-black: #000000;
   --color-vpport-warning: #FF5D5D;
+
+
+  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-fade-in-scale: fade-in-scale 1s ease-out forwards;
 }
 
 @layer components {
@@ -40,6 +44,28 @@
   /* .cust-headline-outline {
     @apply text-white text-shadow-md text-shadow-black font-ibm-serif font-semibold
   } */
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 /* Hide scrollbar for Chrome, IE, Edge and Firefox */
