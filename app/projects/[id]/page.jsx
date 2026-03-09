@@ -60,10 +60,10 @@ export default async function ProjectPage({ params }) {
 
   const Descriptor = ({ k, v }) => {
     return (
-      <p className="inline-flex gap-2">
+      <li className="inline-flex gap-2">
         <span className="font-medium min-w-30">{k}</span>
         <span>{v}</span>
-      </p>
+      </li>
     )
   }
 
@@ -71,8 +71,8 @@ export default async function ProjectPage({ params }) {
 
   return (
     <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans">
-      <header className="flex flex-col gap-2 text-2xl p-6">
-        <Link href="/" className="mb-8 p-3 w-fit -m-3">
+      <header className="flex flex-col gap-3 text-xl p-6">
+        <Link href="/" className="mb-20 p-3 w-fit -m-3">
           <FaChevronLeft />
         </Link>
 
@@ -91,12 +91,14 @@ export default async function ProjectPage({ params }) {
             }}
           />
         </h2>
-        <div className="flex flex-col gap-1">
-          {data.type && <Descriptor k="Type" v={data.type} />}
-          {data.companies && <Descriptor k="Involved" v={data.companies.join(", ")} />}
+        <ul className="flex flex-col gap-1  max-w-160">
           {data.year && <Descriptor k="Year" v={data.year} />}
+          {data.type && <Descriptor k="Type" v={data.type} />}
+          {data.team && <Descriptor k="With" v={data.team.join(", ")} />}
+          {data.companies && <Descriptor k="Client" v={data.companies.join(", ")} />}
           {data.tags && <Descriptor k="Keywords" v={data.tags.join(", ")} />}
-        </div>
+
+        </ul>
 
         <MDXRemote source={content} />
       </header>

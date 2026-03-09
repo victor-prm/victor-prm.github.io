@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function PageHeader() {
 
     return (
-        <header className=" text-2xl flex w-fit flex-col gap-3 md:gap-2  text-black p-6 max-w-180">
+        <header className=" text-xl flex w-fit flex-col gap-3  text-black p-6 max-w-160">
             <h1 className="cust-font-display">
                 <span className="block">Hi</span>
                 I'm Victor
