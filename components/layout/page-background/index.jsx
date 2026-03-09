@@ -8,9 +8,9 @@ export default function PageBackground() {
         <svg
             preserveAspectRatio="xMidYMid slice"
             viewBox="10 10 80 80"
-            className={
-                `fixed top-0 left-0 w-screen h-screen pointer-events-none 
-                -z-10 transition-colors duration-500 
+            className={`
+                fixed top-0 left-0 size-full -z-10
+                transition-colors duration-500 pointer-events-none
                 ${isProjects ? "bg-taupe-200" : " bg-gray-100"}
             `}
         >

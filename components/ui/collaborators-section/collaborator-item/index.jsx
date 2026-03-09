@@ -1,8 +1,6 @@
 import Image from "next/image"
 
 export default function CollaboratorItem(props) {
-    console.log(props)
-
     return (
         <li className="flex items-center justify-center">
             <Image
