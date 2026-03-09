@@ -27,7 +27,7 @@ export default function ProjectItem(props) {
               alt={props.title}
               width={240}
               height={240}
-              className="object-cover object-top size-full rounded-xl grayscale-100 duration-300 group-hover:grayscale-0"
+              className="object-cover object-top size-full rounded-xl pointer-fine:grayscale-100 duration-300 group-hover:grayscale-0"
             />
           ) : (
             <TbFileBroken className="size-8 opacity-60" />

@@ -24,7 +24,7 @@ export default function ImageGallery({ images = [] }) {
     const width = container.offsetWidth;
 
     let columns = 1;
-    const baseWidth = width > 800 ? 480 : 320;
+    const baseWidth = width > 800 ? 480 : 280;
     const gutter = width > 800 ? 32 : 16;
 
 
