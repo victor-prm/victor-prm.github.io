@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }) {
 
   const Descriptor = ({ k, v }) => {
     return (
-      <li className="inline-flex gap-2">
+      <li className="flex flex-col gap-x-2  sm:flex-row">
         <span className="font-medium min-w-30">{k}</span>
         <span>{v}</span>
       </li>
@@ -91,7 +91,7 @@ export default async function ProjectPage({ params }) {
             }}
           />
         </h2>
-        <ul className="flex flex-col gap-1  max-w-160">
+        <ul className="flex flex-col gap-3 md:gap-1  max-w-160">
           {data.year && <Descriptor k="Year" v={data.year} />}
           {data.type && <Descriptor k="Type" v={data.type} />}
           {data.team && <Descriptor k="With" v={data.team.join(", ")} />}
