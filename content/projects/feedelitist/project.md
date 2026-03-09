@@ -1,7 +1,7 @@
 ---
 title: "FeedElitist"
 year: "2024"
-thumbnail: "/projects/feedelitist/feedelitist-1.png"
+thumbnail: "/projects/feedelitist/feedelitist-1.webp"
 short_description: "Marketplace enhancer"
 description: "This is a short summary of the project."
 tags: ["React", "Noodl", "AI", "MongoDB", "HTML", "Javascript", "CSS", "Figma"]

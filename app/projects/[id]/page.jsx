@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }) {
   if (fs.existsSync(publicDir)) {
     images = fs
       .readdirSync(publicDir)
-      .filter((file) => /\.(png|jpe?g|webp|gif)$/i.test(file))
+      .filter((file) => /\.(webp|gif)$/i.test(file))
       .sort((a, b) => getNum(a) - getNum(b))
       .map((file) => {
         const fullPath = path.join(publicDir, file);
