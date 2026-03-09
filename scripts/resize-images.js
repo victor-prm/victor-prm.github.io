@@ -1,10 +1,12 @@
-// scripts/resize-images.js
 import fs from "fs";
 import path from "path";
 import sharp from "sharp";
 
 const projectsDir = path.join(process.cwd(), "public/projects");
 const minWidth = 840;
+
+// Check if we are forcing all images
+const force = process.argv.includes("--force");
 
 async function processFolder(folder) {
     const files = fs.readdirSync(folder).filter(f => /\.(png|jpe?g)$/i.test(f));
@@ -14,10 +16,8 @@ async function processFolder(folder) {
         const ext = path.extname(file).toLowerCase();
         const outputPath = path.join(folder, file.replace(/\.(png|jpe?g)$/i, ".webp"));
 
-        const originalStats = fs.statSync(fullPath);
-
-        // Skip if optimized image exists and is newer than original
-        if (fs.existsSync(outputPath)) {
+        if (!force && fs.existsSync(outputPath)) {
+            const originalStats = fs.statSync(fullPath);
             const optimizedStats = fs.statSync(outputPath);
             if (optimizedStats.mtime >= originalStats.mtime) {
                 console.log(`Skipped: ${file} (already optimized)`);
@@ -27,7 +27,6 @@ async function processFolder(folder) {
 
         const image = sharp(fullPath);
         const meta = await image.metadata();
-
         if (!meta.width) continue;
 
         const resizeOptions = meta.width > minWidth ? { width: minWidth } : {};
@@ -45,7 +44,6 @@ async function processFolder(folder) {
 
 async function main() {
     const subfolders = fs.readdirSync(projectsDir);
-
     for (const subfolder of subfolders) {
         const folderPath = path.join(projectsDir, subfolder);
         if (fs.statSync(folderPath).isDirectory()) {

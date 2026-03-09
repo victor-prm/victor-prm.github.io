@@ -38,7 +38,7 @@ export default function ProjectItem(props) {
           <h2 className="text-xl font-medium">
             {props.title}
           </h2>
-          <p className="text-sm md:text-base font-ibm-mono font-light opacity-75">
+          <p className="text-sm md:text-base font-ibm-mono font-light opacity-60">
             {props.year}
           </p>
         </hgroup>

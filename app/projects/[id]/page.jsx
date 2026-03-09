@@ -67,7 +67,7 @@ export default async function ProjectPage({ params }) {
     )
   }
 
-  {/* <header className=" text-2xl flex w-fit flex-col gap-3 md:gap-2  text-black p-6 max-w-180"></header> */}
+  {/* <header className=" text-2xl flex w-fit flex-col gap-3 md:gap-2  text-black p-6 max-w-180"></header> */ }
 
   return (
     <div className="container flex flex-col mx-auto p-4 md:p-12 gap-8 md:gap-12 font-ibm-sans">
@@ -79,7 +79,18 @@ export default async function ProjectPage({ params }) {
         <h1 className="cust-font-display">
           {data.title}
         </h1>
-        <h2>{data.short_description}</h2>
+        <h2>
+          <MDXRemote
+            source={data.short_description}
+            components={{
+              a: ({ href, children }) => (
+                <Link href={href} className="cust-link">
+                  {children}
+                </Link>
+              ),
+            }}
+          />
+        </h2>
         <div className="flex flex-col gap-1">
           {data.type && <Descriptor k="Type" v={data.type} />}
           {data.companies && <Descriptor k="Involved" v={data.companies.join(", ")} />}
@@ -92,7 +103,7 @@ export default async function ProjectPage({ params }) {
       <main>
         <ImageGallery images={images} />
       </main>
-       <PageFooter />
+      <PageFooter />
     </div>
   );
 }

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "optimize-images": "node scripts/resize-images.js",
+    "optimize-images:force": "node scripts/resize-images.js --force",
     "build": "npm run optimize-images && next build",
     "start": "next start",
     "lint": "eslint"
