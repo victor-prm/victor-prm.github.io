@@ -45,7 +45,7 @@ export default function PageBackground() {
                 </style>
                 <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="50%" stopColor="var(--color-blue-100)" />
-                    <stop offset="100%" stopColor="var(--color-red-100)" />
+                    <stop offset="100%" stopColor="var(--color-orange-100)" />
                 </linearGradient>
             </defs>
 
